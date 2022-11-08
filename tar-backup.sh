@@ -1,19 +1,22 @@
 #!/bin/bash
 
 # File: tar-backup.sh
-# Version: 1.1
+# Version: 2
 # Create gzip tarball archive backup of specified directories and files.
 
 today=$(date +'%Y.%m.%d')
-filename="usb-$today.tar.gz"
-files="code/ documents/ keys/ notes/ photos/ pia.txt"
 
-#. ~/b
-#unmount #~/runz/unmount
-#mnt #~/runz/mnt
 
-cd /media/usb #change dir to usb
-tar -czvf /home/benny/backups/$filename $files #make archive
+#enter archive name
+filename="directory-$today.tar.gz"
+
+#enter path of target dir
+files="directory/"
+
+cd /media/usb/documents/ #change dir
+
+tar -czvf /home/benny/backups/$filename $files #make archive at destination
+
 #tar -czvf ./backups/$filename $files #make archive
 
 if (( $SECONDS > 3600 )) ; then
