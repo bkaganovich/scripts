@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # File: cat-grep.sh
+# Version: 2
 # Search for filename specified as argument vector inside directories specified
 # in dirs array and cat their content, save results to ../filename.txt
 
@@ -8,7 +9,9 @@
 # ./cat-grep.sh filename
 
 # Directories to search
-dirs=('dir1' 'dir2')
+#dirs=('dir1')
+
+fn=$2 
 
 main() {
     printf "Searching for $1...\n" | tee -a ./$1.txt;
