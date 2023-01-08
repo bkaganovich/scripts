@@ -21,9 +21,11 @@ Retrieves and displays information about the network interfaces on a device.
 #### `$ ./get_ip_addresses.sh`
 
 ```bash
+Interface     IP Address      MAC Address
+lo            127.0.0.1
+wlo1          10.0.0.1        00:11:22:33:44:55 
+
 Your public IP address is: 1.2.3.4
-Interface ens3 has IP address 10.0.0.1 and MAC address 00:11:22:33:44:55
-Interface lo has IP address 127.0.0.1 and MAC address 00:00:00:00:00:00
 ```
 
 # Geolocate IP Address
